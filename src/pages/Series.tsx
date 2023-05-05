@@ -11,13 +11,16 @@ export default function Series() {
 
   return (
     <Layout title="Popular Series">
-      {error ? <ErrorComponent /> : null}
-      <EmptyComponentWrapper<Entry[]>
-        EmptyComponent={<EmptyData />}
-        NonEmptyComponent={<ListPrograms data={data} />}
-        data={data}
-        isLoading={isLoading}
-      />
+      {error ? (
+        <ErrorComponent />
+      ) : (
+        <EmptyComponentWrapper<Entry[]>
+          EmptyComponent={<EmptyData />}
+          NonEmptyComponent={<ListPrograms data={data} />}
+          data={data}
+          isLoading={isLoading}
+        />
+      )}
     </Layout>
   )
 }

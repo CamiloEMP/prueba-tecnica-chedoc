@@ -11,13 +11,16 @@ export default function Movies() {
 
   return (
     <Layout title="Popular Movies">
-      {error ? <ErrorComponent /> : null}
-      <EmptyComponentWrapper<Entry[]>
-        EmptyComponent={<EmptyData />}
-        NonEmptyComponent={<ListPrograms data={data} />}
-        data={data}
-        isLoading={isLoading}
-      />
+      {error ? (
+        <ErrorComponent />
+      ) : (
+        <EmptyComponentWrapper<Entry[]>
+          EmptyComponent={<EmptyData />}
+          NonEmptyComponent={<ListPrograms data={data} />}
+          data={data}
+          isLoading={isLoading}
+        />
+      )}
     </Layout>
   )
 }
