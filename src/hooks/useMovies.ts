@@ -5,8 +5,8 @@ import { ProgramType } from '~/types.d'
 import type { Entry } from '~/types'
 import { filterPrograms, sortProgramByTitle } from '~/utils/programs'
 
-export function useSeries() {
-  const [series, setSeries] = useState<Entry[]>([])
+export function useMovies() {
+  const [movies, setMovies] = useState<Entry[]>([])
   const [error, setError] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -14,18 +14,20 @@ export function useSeries() {
     setIsLoading(true)
     getMoviesAndSeries()
       .then(({ entries }) => {
-        const filteredSeries = filterPrograms(entries, ProgramType.Series)
-        const sortedSeries = sortProgramByTitle(filteredSeries)
-        const seriesToShow = sortedSeries.slice(0, 20)
+        const filteredMovies = filterPrograms(entries, ProgramType.Movie)
 
-        setSeries(seriesToShow)
+        const sortedMovies = sortProgramByTitle(filteredMovies)
+
+        const moviesToShow = sortedMovies.slice(0, 20)
+
+        setMovies(moviesToShow)
       })
       .catch(() => setError(true))
       .finally(() => setIsLoading(false))
   }, [])
 
   return {
-    data: series,
+    data: movies,
     isLoading,
     error,
   }

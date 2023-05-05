@@ -17,7 +17,7 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/movies">
             <Card title="Popular movies">
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-2xl text-white">MOVIES</span>
