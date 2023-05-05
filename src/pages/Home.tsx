@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 
 import { Card } from '~/components/Card'
-import NavLayout from '~/layouts/NavLayout'
+import Layout from '~/layouts/Layout'
 
 export default function Home() {
   return (
-    <NavLayout title="Popular titles">
+    <Layout title="Popular titles">
       <ul className="flex gap-4">
         <li>
           <Link to="/series">
@@ -26,6 +26,6 @@ export default function Home() {
           </Link>
         </li>
       </ul>
-    </NavLayout>
+    </Layout>
   )
 }

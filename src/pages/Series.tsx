@@ -3,14 +3,14 @@ import { EmptyData } from '~/components/EmptyData'
 import { ErrorComponent } from '~/components/ErrorComponent'
 import { ListPrograms } from '~/components/ListPrograms'
 import { useSeries } from '~/hooks/useSeries'
-import NavLayout from '~/layouts/NavLayout'
+import Layout from '~/layouts/Layout'
 import type { Entry } from '~/types'
 
 export default function Series() {
   const { data, error, isLoading } = useSeries()
 
   return (
-    <NavLayout title="Popular titles">
+    <Layout title="Popular titles">
       {error ? <ErrorComponent /> : null}
       <EmptyComponentWrapper<Entry[]>
         EmptyComponent={<EmptyData />}
@@ -18,6 +18,6 @@ export default function Series() {
         data={data}
         isLoading={isLoading}
       />
-    </NavLayout>
+    </Layout>
   )
 }

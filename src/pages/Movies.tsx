@@ -3,14 +3,14 @@ import { EmptyData } from '~/components/EmptyData'
 import { ErrorComponent } from '~/components/ErrorComponent'
 import { ListPrograms } from '~/components/ListPrograms'
 import { useMovies } from '~/hooks/useMovies'
-import NavLayout from '~/layouts/NavLayout'
+import Layout from '~/layouts/Layout'
 import type { Entry } from '~/types'
 
 export default function Movies() {
   const { data, error, isLoading } = useMovies()
 
   return (
-    <NavLayout title="Popular titles">
+    <Layout title="Popular titles">
       {error ? <ErrorComponent /> : null}
       <EmptyComponentWrapper<Entry[]>
         EmptyComponent={<EmptyData />}
@@ -18,6 +18,6 @@ export default function Movies() {
         data={data}
         isLoading={isLoading}
       />
-    </NavLayout>
+    </Layout>
   )
 }
