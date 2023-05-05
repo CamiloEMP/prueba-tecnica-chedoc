@@ -1,7 +1,9 @@
+import NavLayout from '~/layouts/NavLayout'
+
 export default function Home() {
   return (
-    <div>
-      <h1>home</h1>
-    </div>
+    <NavLayout title="Popular titles">
+      <span>hola</span>
+    </NavLayout>
   )
 }
