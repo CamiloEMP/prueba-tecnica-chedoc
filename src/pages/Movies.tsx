@@ -1,4 +1,4 @@
-import { ListItems } from '~/components/ListItems'
+import { ListPrograms } from '~/components/ListPrograms'
 import { Loader } from '~/components/Loader'
 import { useMovies } from '~/hooks/useMovies'
 import NavLayout from '~/layouts/NavLayout'
@@ -9,7 +9,7 @@ export default function Movies() {
   return (
     <NavLayout title="Popular titles">
       {error ? <div>{error}</div> : null}
-      {isLoading ? <Loader /> : <ListItems data={data} />}
+      {isLoading ? <Loader /> : <ListPrograms data={data} />}
     </NavLayout>
   )
 }
