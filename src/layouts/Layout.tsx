@@ -14,7 +14,7 @@ export default function Layout({ title, children }: NavProps) {
       <main className="flex-1">
         <section className="bg-neutral-800">
           <div className={`${CONTAINER_CLASSNAME}`}>
-            <h2 className="text-lg font-medium text-white bg-neutral-800">{title}</h2>
+            <h2 className="text-2xl font-medium text-white bg-neutral-800">{title}</h2>
           </div>
         </section>
         <section className={CONTAINER_CLASSNAME}>{children}</section>

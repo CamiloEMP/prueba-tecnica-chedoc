@@ -8,7 +8,7 @@ import windows_store from '~/assets/store/windows-store.svg'
 
 export function Footer() {
   return (
-    <footer className="flex-shrink bg-neutral-800">
+    <footer className="flex-shrink mt-6 bg-neutral-800">
       <section className={`${CONTAINER_CLASSNAME} py-8 flex flex-col  gap-4`}>
         <ul className="flex flex-wrap gap-2 text-sm text-neutral-300">
           <li>Terms and conditions</li>

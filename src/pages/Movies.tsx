@@ -10,7 +10,7 @@ export default function Movies() {
   const { data, error, isLoading } = useMovies()
 
   return (
-    <Layout title="Popular titles">
+    <Layout title="Popular Movies">
       {error ? <ErrorComponent /> : null}
       <EmptyComponentWrapper<Entry[]>
         EmptyComponent={<EmptyData />}

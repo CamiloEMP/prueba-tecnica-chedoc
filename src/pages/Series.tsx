@@ -10,7 +10,7 @@ export default function Series() {
   const { data, error, isLoading } = useSeries()
 
   return (
-    <Layout title="Popular titles">
+    <Layout title="Popular Series">
       {error ? <ErrorComponent /> : null}
       <EmptyComponentWrapper<Entry[]>
         EmptyComponent={<EmptyData />}

@@ -10,7 +10,7 @@ export function CardProgram({ onClick, ...rest }: CardProgramProps) {
 
   return (
     <button
-      className="relative flex flex-col items-center gap-2 border-2 border-transparent w-44 h-72 hover:border-gray-300"
+      className="relative flex flex-col items-center gap-2 p-1 border-2 border-transparent group w-44 h-72 hover:border-gray-300 "
       onClick={() => onClick(rest)}
     >
       <img
