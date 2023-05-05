@@ -1,12 +1,10 @@
 import defaultImage from '~/assets/placeholder.png'
-import type { Entry } from '~/types'
 
 interface CardProps {
   title: string
   urlImg?: string
   altImage?: string
   children?: React.ReactNode
-  onClick: (entry: Entry) => void
 }
 
 export function Card({ title, altImage, urlImg, children }: CardProps) {
