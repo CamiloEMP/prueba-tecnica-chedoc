@@ -14,10 +14,11 @@ export function Card({ title, altImage, urlImg, children }: CardProps) {
         alt={altImage ?? title}
         className="object-cover w-full h-full bg-cover bg-black/90"
         src={urlImg ?? defaultImage}
+        onError={e => (e.currentTarget.src = defaultImage)}
       />
-      <div>
-        <span className="text-medium">{title}</span>
-      </div>
+      <span className="block px-2 text-center truncate whitespace-nowrap w-44 text-medium">
+        {title}
+      </span>
       {children ?? null}
     </div>
   )

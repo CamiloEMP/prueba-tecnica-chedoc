@@ -8,7 +8,7 @@ export default function Home() {
     <NavLayout title="Popular titles">
       <ul className="flex gap-4">
         <li>
-          <Link to="/">
+          <Link to="/series">
             <Card title="Popular series">
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-2xl text-white">SERIES</span>
