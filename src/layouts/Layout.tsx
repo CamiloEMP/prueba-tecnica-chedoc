@@ -17,7 +17,7 @@ export default function Layout({ title, children }: NavProps) {
             <h2 className="text-2xl font-medium text-white bg-neutral-800">{title}</h2>
           </div>
         </section>
-        <section className={CONTAINER_CLASSNAME}>{children}</section>
+        <section className={`${CONTAINER_CLASSNAME} space-y-4`}>{children}</section>
       </main>
       <Footer />
     </>

@@ -4,6 +4,7 @@ import { getMoviesAndSeries } from '~/services/getMoviesAndSeries'
 import { ProgramType } from '~/types.d'
 import type { Entry } from '~/types'
 import { filterPrograms, sortProgramByTitle } from '~/utils/programs'
+import { INITIAL_RESULTS } from '~/constants'
 
 export function useMovies() {
   const [movies, setMovies] = useState<Entry[]>([])
@@ -15,10 +16,8 @@ export function useMovies() {
     getMoviesAndSeries()
       .then(({ entries }) => {
         const filteredMovies = filterPrograms(entries, ProgramType.Movie)
-
         const sortedMovies = sortProgramByTitle(filteredMovies)
-
-        const moviesToShow = sortedMovies.slice(0, 20)
+        const moviesToShow = sortedMovies.slice(0, INITIAL_RESULTS)
 
         setMovies(moviesToShow)
       })
