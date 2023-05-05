@@ -1,4 +1,4 @@
-const CONTAINER_CLASSNAME = 'max-w-screen-xl mx-auto w-full py-4'
+const CONTAINER_CLASSNAME = 'max-w-screen-xl mx-auto w-full p-4'
 
 interface NavProps {
   title: string
